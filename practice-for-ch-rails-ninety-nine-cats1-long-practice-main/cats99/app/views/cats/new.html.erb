@@ -1,0 +1,9 @@
+<h1> Enter New Cat </h1>
+<input type="submit" value="Create Cat">
+<br>
+<form action="<%= new_cat_url%>" method="POST">
+<%= render "cat", cat: @cat%>
+<input type="submit" value="Create Cat">
+
+
+</form>

@@ -1,0 +1,45 @@
+
+    <label for="name">Name:
+        <input type="text" id="name" name="cat[name]" value="<%= cat.name %>" >
+    </label>
+    <br>
+    <br>
+    <h3> sex: </h3>
+
+    <label for="M">Male:
+        <input type="radio" id="M" name="cat[sex]" value="<%= cat.sex %>" >
+    </label>
+     <label for="F">Female:
+        <input type="radio" id="F" name="cat[sex]" value="<%= cat.sex %>" >
+    </label>
+
+
+    <%# <% Cat::CAT_COLORS.each do |color| %> 
+       <%# <label for="color">  %>
+        <%# <input type="radio" id="color" name="cat[color]" value="<%=#@cat.color %>
+        <%# </label> %>
+    <%# <% end %> 
+    <br>
+    <br>
+    <label for="colors">Pick a color:
+    
+    <select id="colors"> 
+
+    <% Cat::CAT_COLORS.each do |color| %>
+        <option value="<%= cat.color %>"> <%= color %> </option>
+    <% end %>
+    </select>
+    </label>
+
+    <br>
+    <br>
+    <label for="birthday">Birthdate:
+    <input type="date" id="birthday" name="cat[birth_date]" value="<%= cat.birth_date %>">
+    </label>
+    <br>
+    <br>
+    <label>Describe the Cat:</label>
+    <br>
+    <br>
+    <textarea id="description" name="cat[description]" value="<%= cat.description%>" placeholder="kitty">
+</form>
